@@ -1,0 +1,294 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: "NexonLv1Gothic";
+    font-weight: 300;
+}
+.wrap{
+    max-width: 1600px;
+    overflow: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 60px;
+    transition: all 0.5s;
+}
+.header.fixed {
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.5s;
+    border: solid 2px #b3b3b3;
+}
+.title-logo{
+    font-weight: 700;
+    font-size: 28px;
+    justify-self: start;
+    color: #ffffff;
+}
+.title-logo.fixed {
+    color: #39642F;
+    font-weight: 700;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 50px;
+}
+.menu-item.fixed {
+    color: #000000;
+}
+.menu-item{
+    transition: 0.3s ease;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    border-top: 3px solid reba(0,0,0,1);
+    border-bottom: 3px solid reba(0,0,0,1);
+    padding: 20px 0;
+    margin: 0 28px;
+}
+.menu-item:hover{
+    border-top: 3px solid #E2F41B;
+    border-bottom: 3px solid #E2F41B;
+    padding: 10px 0; 
+}
+.active{
+    color: #E2F41B;
+}
+.menu-item > a:hover:after{
+width:100%;
+left: 0;
+}
+.main-img{
+    background-image: url('/assets/img/main.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 680px;
+    position: relative;;
+}
+
+.main-title{
+    color: #ffffff;
+    position: absolute;
+    bottom: 230px;
+    right: 50px;
+    font-size: 100px;
+    font-weight:bold;
+    text-align: right;
+    letter-spacing: 5px;
+}
+.main-title{
+    cursor: pointer;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 0.02em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98); 
+    background-image: linear-gradient(135deg, #fff 0%, #fff 50%, transparent 50.1%);
+    background-size: 0% 100%;
+}
+.main-title:hover{
+    background-size: 250% 100%;
+}
+.main-flag{
+    position: absolute;
+    bottom: 170px;
+    right: 55px;
+    background-color: #E2F41B;
+    color: #ffffff;
+    padding: 10px 30PX;
+}
+.main-flag > p {
+    font-weight: 500;
+    color: #39642F;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.container{
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.contents {
+    width: 100%;
+    border: dashed 2px #eaeaea;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+.contents-title > h2{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.contents-title > h2> span{
+    font-size: 60px;
+    font-weight: 800;
+    color: #39642F;
+}
+.contents-title > p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 28px;
+}
+#about{
+    height: 650px;
+    width: 100%;
+}
+.about-title{
+    margin-left: 15px;
+}
+
+#about-images {
+    width: 100%;
+    height: 100vh;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.about-img {
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    margin-right: -40px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-img.i1{
+    background-image: url('assets/img/tennis-img-01.jpg');
+    border-radius: 53% 42% 45% 48% / 63% 35% 61% 36%;
+    overflow: hidden;
+}
+.about-img.i2{
+    background-image: url('assets/img/tennis-img-02.jpg');
+    border-radius: 36% 64% 45% 57% / 57% 77% 29% 36%;
+    overflow: hidden;
+}
+.about-img.i3{
+    background-image: url('https://cdn.pixabay.com/photo/2014/03/16/13/43/kim-clijsters-288567_1280.jpg');
+    border-radius: 59% 40% 37% 66% / 56% 35% 70% 40%;
+    overflow: hidden;
+}
+.about-img.i4{
+    background-image: url('https://cdn.pixabay.com/photo/2018/07/23/07/35/tennis-3556179_1280.jpg');
+    border-radius: 50% ;
+    overflow: hidden;
+}
+
+#club{
+    background-color: #f7f7f7;
+    border-radius: 60px;
+    height: 500px;
+}
+
+.club-title{
+    text-align: right;
+    margin-right: 40px;
+}
+
+#lesson{
+
+}
+
+.lesson-table{
+    margin-left: 15px;
+    padding-top: 10px;
+}
+.lesson-table > h2{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: inline;
+}
+.lesson-table > span{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: inline;
+}
+.lesson-list{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    table-layout:fixed;
+    border-collapse:collapse;
+    width:100%;
+    margin:10px 0;
+    border-bottom:2px solid #ccc;
+}
+
+.lesson-title{
+    margin-left: 15px;
+}
+
+#contact{
+    background-color: #f7f7f7;
+}
+.footer{
+ width: 100%;
+ height: 200px;
+ background-color: #185902;
+}
+
+
