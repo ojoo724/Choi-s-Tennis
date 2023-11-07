@@ -8,6 +8,8 @@
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link href="style.css"  rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -15,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- kakao Map -->
     <script src="index.js"></script>
 </head>
 <body>
@@ -66,22 +69,22 @@
                     </p>
                 </div>
                 <div class="lesson-table">
-                    <h2>평일레슨</h2> <span>(레슨시간: 06:00 ~ 24:00) 한 달 프로그램</span>
+                    <h2>평일레슨</h2> <span>(레슨시간 06:00 ~ 24:00) 한 달 프로그램</span>
                     <table class="lesson-list">
                         <colgroup>
                             <col width="20%" />
-                            <col width="15%" />
-                            <col width="15%" />
-                            <col width="30%" />
+                            <col width="20%" />
+                            <col width="20%" />
+                            <col width="20%" />
                             <col width="20%" />
                         </colgroup>
                         <thead>
                             <tr>
-                            <th></th>
-                            <th>주 1회</th>
-                            <th>주 2회</th>
-                            <th>주 3회</th>
-                            <th>비고</th>
+                                <th></th>
+                                <th>주 1회</th>
+                                <th>주 2회</th>
+                                <th>주 3회</th>
+                                <th>비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,36 +95,103 @@
                                 <td>320,000원</td>
                                 <td>레슨 20분+볼 머신기 20분</td>
                             </tr>
+                            <tr>
+                                <th>그룹 (2~4인)</th>
+                                <td>110,000원</td>
+                                <td>190,000원</td>
+                                <td>260,000원</td>
+                                <td>레슨 30분+볼 머신기 20분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h2>주말레슨</h2> <span>(레슨시간 07:00 ~ 15:00) 한 달 프로그램</span>
+                    <table class="lesson-list">
+                        <colgroup>
+                            <col width="20%" />
+                            <col width="30%" />
+                            <col width="30%" />
+                            <col width="20%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                            <th></th>
+                            <th>주 1회</th>
+                            <th>주 2회</th>
+                            <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>개인 (1:1)</th>
+                                <td>160,000원</td>
+                                <td>280,000원</td>
+                                <td>레슨 20분+볼 머신기 20분</td>
+                            </tr>
+                            <tr>
+                                <th>그룹 (2~4인)</th>
+                                <td>140,000원</td>
+                                <td>220,000원</td>
+                                <td>레슨 30분+볼 머신기 30분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>포인트 1회 레슨</h2>
+                    <table class="lesson-list">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <thead>
+                            <th>이용시간</th>
+                            <th>비용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>레슨 20분+볼 머신기 20분</td>
+                                <th>50,000원</th>
+                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="contents" id="contact">
-        
+                <div class="contact-title contents-title">
+                    <!-- 텍스트 애니메이션 추가하기 -->
+                    <h2><span>Let's Play Tennis</span></h2>
+                    <button class="contact-btn btn-active" data-btn="map">오시는길</button>
+                    <button class="contact-btn" data-btn="input">레슨문의</button>
+                </div>
+                <div class="contact-map">
+                    <div class="map-addr">
+                        <p id="addr">인천 계양구 계양대로 196 2층 (계산동 944-44)</p>
+                        <span id="copyBtn" class="material-symbols-outlined">
+                            content_copy
+                        </span>
+                    </div>
+                    <div id="map"></div>
+                </div>
+                <div class="contact-input">
+                    
+                </div>
             </div>
-            <footer class="footer">
-        
-            </footer>
         </section>
+        <footer class="footer">
+    
+        </footer>
     </div>
     <script>
-        const lenis = new Lenis()   
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-
-        // about 이미지
-        const ani2 = gsap.timeline();
-        ani2.from(".about-img.i1", {x: -100, autoAlpha:0})
+        // about 이미지 애니메이션 효과
+        const ani1 = gsap.timeline();
+        ani1.from(".about-img.i1", {x: -100, autoAlpha:0})
             .from(".about-img.i2", {x: -300, autoAlpha:0})
             .from(".about-img.i3", {x: -600, autoAlpha:0})
             .from(".about-img.i4", {x: -900, autoAlpha:0});
 
         ScrollTrigger.create({
-            animation: ani2,
+            animation: ani1,
             trigger: ".about-images",
             start: "350",
             end: "+=280",
@@ -129,6 +199,24 @@
             pin: true,
             anticipatePin: 1,
         });
+
+
+        // kakao Map
+        let container = document.getElementById('map'); 
+        let options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.541405, 126.722831), //지도의 중심좌표.
+            level: 1 //지도의 레벨(확대, 축소 정도)
+        };
+
+        let map = new kakao.maps.Map(container, options); //지도 생성 
+
+        let markerPosition  = new kakao.maps.LatLng(37.541380, 126.722931); 
+        // 마커를 생성
+        let marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        marker.setMap(map);
     </script>
 </body>
 </html>

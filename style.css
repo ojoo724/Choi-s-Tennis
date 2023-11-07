@@ -48,6 +48,12 @@ body {
     font-family: "NexonLv1Gothic";
     font-weight: 300;
 }
+html{
+    scroll-behavior: smooth; 
+}
+.none{
+    display: none;
+}
 .wrap{
     max-width: 1600px;
     overflow: hidden;
@@ -66,7 +72,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     transition: all 0.5s;
-    border: solid 2px #b3b3b3;
+    box-shadow: 0px 8px 6px -6px #66666699
 }
 .title-logo{
     font-weight: 700;
@@ -119,7 +125,6 @@ left: 0;
     height: 680px;
     position: relative;;
 }
-
 .main-title{
     color: #ffffff;
     position: absolute;
@@ -161,14 +166,13 @@ left: 0;
 
 .container{
     width: 100%;
-    padding: 0 40px;
+    padding: 0 100px;
     box-sizing: border-box;
 }
 
 .contents {
     width: 100%;
-    border: dashed 2px #eaeaea;
-    padding: 60px 0;
+    padding: 90px 0;
     margin: 0 auto;
 }
 .contents-title > h2{
@@ -247,13 +251,9 @@ left: 0;
     margin-right: 40px;
 }
 
-#lesson{
-
-}
-
 .lesson-table{
     margin-left: 15px;
-    padding-top: 10px;
+    margin-top: 40px;
 }
 .lesson-table > h2{
     font-size: 28px;
@@ -268,22 +268,91 @@ left: 0;
     display: inline;
 }
 .lesson-list{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 5px;
     table-layout:fixed;
     border-collapse:collapse;
     width:100%;
-    margin:10px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
     border-bottom:2px solid #ccc;
+    text-align: center;
+
 }
 
+.lesson-list > thead {
+    background-color: rgb(114, 179, 53);
+    color: #ffffff;
+    
+}
+.lesson-list > thead > tr > th {
+    padding: 15px;
+    border: solid 1px #ffffff;
+}
+
+.lesson-list > tbody > tr > td, th {
+    padding: 20px;
+    border: dashed 1px #dcdbdb;
+}
 .lesson-title{
     margin-left: 15px;
 }
 
-#contact{
+.contact-title{
+    text-align: center;
+    margin-right: 40px;
+}
+
+.contact-btn{
+    font-family: "NexonLv1Gothic";
+    width: 200px;
+    height: 60px;
+    padding: 15px 30px;
     background-color: #f7f7f7;
+    color: #185902;
+    border: solid 3px #185902;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    transition: all .2s ease-in-out;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+.contact-btn:hover{
+    background:  #185902;
+    color: #ffffff;
+}
+.btn-active{
+    background:  #185902;
+    color: #ffffff;
+}
+.map-addr{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#addr{
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+#copyBtn{
+    cursor: pointer;
+}
+
+#map{
+    width: 80%;
+    height:600px;
+    margin:0 auto;
+    border: 10px solid #185902;
+}
+.contact-input{  
+    background-color: #000000;
 }
 .footer{
  width: 100%;
