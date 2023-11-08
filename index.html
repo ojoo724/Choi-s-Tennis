@@ -18,6 +18,7 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- kakao Map -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=18438c52964466daf38bdd3904e7c9f6"></script>
     <script src="index.js"></script>
 </head>
 <body>
@@ -60,6 +61,38 @@
                     <p>레슨자들과 함께하는 테니스 경기, 초보자도 함께 즐겨요 :)
                     </p>
                 </div>  
+                <div class="club-images">
+                    <div class="slider1">
+                        <div><img src="./assets/img/club/tennis-club-01.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-02.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-03.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-04.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-05.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-06.jpg" /></div>
+                        <!--   clone     -->
+                        <div class="clone"><img src="./assets/img/club/tennis-club-01.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-02.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-03.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-04.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-05.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-06.jpg" /></div>
+                    </div>
+                    <div class="slider2">
+                        <div><img src="./assets/img/club/tennis-club-06.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-07.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-08.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-09.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-10.jpg" /></div>
+                        <div><img src="./assets/img/club/tennis-club-11.jpg" /></div>
+                        <!--   clone     -->
+                        <div class="clone"><img src="./assets/img/club/tennis-club-06.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-07.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-08.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-09.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-10.jpg" /></div>
+                        <div class="clone"><img src="./assets/img/club/tennis-club-11.jpg" /></div>
+                    </div>
+                </div>
             </div>
             <div class="contents" id="lesson">
                 <div class="lesson-title contents-title">
@@ -181,7 +214,7 @@
                             <label for="ctctName">Name</label>
                             <input id="ctctName" type="text">
                             <label for="ctctEmail">Email</label>
-                            <input type="ctctEmail">
+                            <input id="ctctEmail" type="email">
                             <label for="ctctDesc">Contents</label>
                             <textarea id="ctctDesc"></textarea>
                             <button id="ctctBtn">문의하기</button>
@@ -191,7 +224,15 @@
             </div>
         </section>
         <footer class="footer">
-    
+            <div class="footer-info">
+                <p>Let's Play Tennis</p>
+                <p id="footer-title">초이스 테니스</p>
+                <p>인천 계양구 계양대로 196 2층 (계산동 944-44)</p>
+                <br>
+                <p>06:00 - 24:00 (매주 수요일 휴무)</p>
+            </div>
+            <br>
+            <p>Copyright 2023. 초이스테니스., Ltd. all rights reserved.</p>
         </footer>
     </div>
     <script>

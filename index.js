@@ -67,10 +67,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 문의하기
   const ctctBtn = document.querySelector('#ctctBtn');
+  const ctctName = document.getElementById('ctctName');
+  const ctctEmail = document.getElementById('ctctEmail');
 
   ctctBtn.addEventListener('click', function() {
-    alert("감사합니다.")
-    document.getElementById('frm').reset()
+    if(ctctName.value === ''){
+      alert("이름을 입력해주세요.")
+    }else if(ctctEmail.value === ''){
+      alert("이메일을 입력해주세요.")
+    }else{
+      alert("감사합니다.")
+      document.getElementById('frm').reset()
+    }
   });
 
 });
@@ -84,3 +92,4 @@ function copyTextToClipboard(text) {
   document.execCommand('copy');
   document.body.removeChild(textarea);
 }
+
