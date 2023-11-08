@@ -54,10 +54,7 @@ html{
 .none{
     display: none;
 }
-.wrap{
-    max-width: 1600px;
-    overflow: hidden;
-}
+
 .header{
     display: flex;
     align-items: center;
@@ -118,6 +115,7 @@ width:100%;
 left: 0;
 }
 .main-img{
+    width: 100%;
     background-image: url('/assets/img/main.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -172,7 +170,7 @@ left: 0;
 
 .contents {
     width: 100%;
-    padding: 90px 0;
+    padding-top: 120px;
     margin: 0 auto;
 }
 .contents-title > h2{
@@ -282,7 +280,7 @@ left: 0;
 }
 
 .lesson-list > thead {
-    background-color: rgb(114, 179, 53);
+    background-color: #82CC00;
     color: #ffffff;
     
 }
@@ -335,8 +333,7 @@ left: 0;
     justify-content: center;
     margin-bottom: 10px;
 }
-
-#addr{
+#addr,#copy-done,#addrTxt{
     font-size: 20px;
     font-weight: 500;
     margin-right: 8px;
@@ -349,15 +346,68 @@ left: 0;
     width: 80%;
     height:600px;
     margin:0 auto;
-    border: 10px solid #185902;
+    border: 6px solid #185902;
 }
-.contact-input{  
-    background-color: #000000;
+.contact-map{
+    height:700px;
+    position: relative;
+}
+
+.ctct-div{
+    margin: 0 auto;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ctct-div > input{
+    width: 500px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #185902;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.ctct-div > label{
+    width: 500px;
+    margin: 15px auto 5px auto;
+}
+.ctct-div > textarea{
+    font-size: 15px;
+    padding: 10px;
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #185902;
+}
+#ctctBtn{
+    font-family: "NexonLv1Gothic";
+    width: 120px;
+    height: 50px;
+    padding: 8px 10px;
+    background-color: #82CC00;
+    color: #ffffff;
+    border: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    transition: all .2s ease-in-out;
+    margin-top: 30px;
+    border-radius: 30px;    
+    text-align: center;
 }
 .footer{
  width: 100%;
  height: 200px;
  background-color: #185902;
+}
+#ctctBtn:hover{
+    background:  #185902;
+    color: #ffffff;
 }
 
 

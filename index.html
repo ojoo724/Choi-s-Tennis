@@ -166,15 +166,27 @@
                 </div>
                 <div class="contact-map">
                     <div class="map-addr">
+                        <span id="addrTxt">주소: </span>
                         <p id="addr">인천 계양구 계양대로 196 2층 (계산동 944-44)</p>
+                        <p id="copy-done" class="none">주소가 복사되었습니다 :)</p>
                         <span id="copyBtn" class="material-symbols-outlined">
                             content_copy
                         </span>
                     </div>
                     <div id="map"></div>
                 </div>
-                <div class="contact-input">
-                    
+                <div class="contact-input none">
+                    <form id="frm">
+                        <div div class="ctct-div">
+                            <label for="ctctName">Name</label>
+                            <input id="ctctName" type="text">
+                            <label for="ctctEmail">Email</label>
+                            <input type="ctctEmail">
+                            <label for="ctctDesc">Contents</label>
+                            <textarea id="ctctDesc"></textarea>
+                            <button id="ctctBtn">문의하기</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

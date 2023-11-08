@@ -20,6 +20,7 @@ window.addEventListener('scroll', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  // 오시는길, 레슨문의 버튼 클릭
   const contactBtn = document.querySelectorAll('.contact-btn');
   const mapDiv = document.querySelector('.contact-map');
   const inputDiv = document.querySelector('.contact-input');
@@ -42,7 +43,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // 주소 복사하기 버튼 클릭
+  const copyBtn = document.querySelector('#copyBtn');
+  const addr = document.querySelector('#addr');
+  const addrTxt = document.querySelector('#addrTxt');
+  const copyDone = document.querySelector('#copy-done');
+
+  copyBtn.addEventListener('click', function() {
+    
+    // 클릭된 버튼의 텍스트를 복사
+    copyTextToClipboard(addr.innerText);
+    addr.classList.add('none');
+    addrTxt.classList.add('none');
+    copyDone.classList.remove('none');
+    
+    // 복사 완료 팝업
+    setTimeout(() => {
+      addr.classList.remove('none');
+      addrTxt.classList.remove('none');
+      copyDone.classList.add('none');
+    }, 1500);
+  });
+
+  // 문의하기
+  const ctctBtn = document.querySelector('#ctctBtn');
+
+  ctctBtn.addEventListener('click', function() {
+    alert("감사합니다.")
+    document.getElementById('frm').reset()
+  });
+
 });
 
-
-// 레슨문의 클릭
+// 클립보드에 텍스트 저장
+function copyTextToClipboard(text) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+}
